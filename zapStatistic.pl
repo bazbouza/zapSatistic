@@ -112,6 +112,7 @@ sub displayZapStatistic{
        
        closeCSVfiles()  if ($csvExport eq "ON");
        print "/////////   END OF PARSING the Log File : $filesNameArr[$cpt]   //////////\n";
+       print "GOOD TEST"
    }
 }
 
