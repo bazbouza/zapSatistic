@@ -112,7 +112,7 @@ sub displayZapStatistic{
        
        closeCSVfiles()  if ($csvExport eq "ON");
        print "/////////   END OF PARSING the Log File : $filesNameArr[$cpt]   //////////\n";
-    }
+   }
 }
 
 
@@ -141,14 +141,7 @@ sub closeCSVfiles{
 sub getZapDuration{
     my ($startTime , $endTime) = @_; #"05:07:53.249"
     my $diff =  to_milli($endTime) - to_milli($startTime);
-
-    my $res = "";
-    if ( ($diff / 1000) >= 1){
-      $res .= ($diff /1000);
-    }else{
-      $res .= "0.".($diff % 1000);
-    }
-   return $res;
+    return ($diff/1000);
 }
 
 sub to_milli {
