@@ -1,32 +1,21 @@
-pipepline{
+pipeline {
+    agent any
 
-	agent any
-
-	stages{
-		stage('Build'){
-			steps{
-				sh '''
-           			echo "build step"
-        		'''
-				
-			}
-		}
-
-		stage('Test'){
-			step{
-				sh '''
-					echo "test step"
-				'''
-			}
-		}
-
-
-		stage('Deploy'){
-			step{
-				ssh '''
-					echo "deply step"
-				'''
-			}
-		}
-	}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
