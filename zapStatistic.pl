@@ -41,10 +41,6 @@ sub parseParams{
 
 sub parseLogFiles{
    
-  my $currentLine = "";
-  my $newZapCount = 0;
-  my $zapLineLog = "";
-  my $parsingFileBreaked= 0; 
  
   foreach my $file (@filesNameArr) {
        $newZapCount = 0;	
