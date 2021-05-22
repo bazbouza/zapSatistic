@@ -7,9 +7,7 @@ use Getopt::Long;
 
 #die "usage: /usr/bin/perl $0 file1 file2.\n" if(($#ARGV + 1) == 0) ; 
 
-my $REG1 = "onGlobalKeyEvent.*CHANNEL_UP|onGlobalKeyEvent.*CHANNEL_DOWN" ;
-my $REG2 = "eXSERV_NOTIFICATION_EVENT_FIRST_FRAME" ;
-
+just for test
 #  this table will stock all statistic hash of log files
 our @GlobalStatisticZapResult = ();
 
